@@ -1,0 +1,11 @@
+#!/bin/bash
+
+editor=$(git config --get core.editor)
+
+if[[$editor==*"emacs"* ]]; then
+
+echo "Push rejected! please don't use Emacs for commits."
+
+exit 1
+
+fi
